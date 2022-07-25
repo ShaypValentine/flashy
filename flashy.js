@@ -237,7 +237,7 @@ class FlashMessages extends HTMLElement {
             if (elem.nextElementSibling) {
                 triggerAnimation(200, 'moveup', elem.nextElementSibling);
             }
-            if (elem.nextElementSibling.nextElementSibling) {
+            if (elem.nextElementSibling !== null && elem.nextElementSibling.nextElementSibling) {
                 triggerAnimation(
                     200,
                     'moveup',
@@ -364,7 +364,7 @@ class FlashMessages extends HTMLElement {
         this.style.bottom = `${this.shadowRootObj.children[0].clientHeight -
             this.clientHeight +
             20}px`;
-        this.shadowRootObj.children[0].children[0].style.height = `${
+        this.shadowRootObj.children[0].style.height = `${
             this.shadowRootObj.children[0].clientHeight
         }px`;
     }
